@@ -1,6 +1,8 @@
 <?php
 session_start();
-$data = json_decode($_SESSION['data']);
+if(array_key_exists('data', $_SESSION)){
+    $data = json_decode($_SESSION['data']);
+}
 
 ?>
 <!DOCTYPE html>
